@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mi niña hermosa</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
+    body{
+      background-image:url("https://i.pinimg.com/736x/4d/66/f2/4d66f21f9667116d2123616ebe8ff823.jpg");
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      margin:0;
+      font-family:'Playfair Display',serif;
+    }
+
+    h1{
+      text-align:center;
+      font-size:60px;
+      color:#ff2244;
+      text-shadow:2px 2px 10px black;
+      margin-top:30px;
+    }
+
+    .contenedor{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-top:20px;
+    }
+
+    .texto{
+      text-align:center;
+      color: #292424;
+      font-size:27px;
+      font-style:italic;
+      text-shadow:1px 1px 8px black;
+      margin-top:14px;
+    }
+
+    .boton{
+      display:block;
+      margin:30px auto;
+      padding:12px 30px;
+      background-color:#ff2244;
+      color:white;
+      font-size:20px;
+      font-family:'Playfair Display',serif;
+      font-style:italic;
+      border-radius:30px;
+      cursor:pointer;
+      text-shadow:1px 1px 5px black;
+    }
+
+    #carta{
+      display:none;
+      color:#2a0f14;
+      text-align:center;
+      font-size:22px;
+      font-style:italic;
+      text-shadow:1px 1px 8px black;
+      padding:100px;
+      margin-top:20px;
+    }
+
+    #carta h2{
+      font-size:40px;
+      color:#ff2244;
+      text-shadow:2px 2px 10px black;
+    }
+
+    /* Emoji musica */
+    #emojiMusica{
+      font-size:45px;
+      cursor:pointer;
+      margin-top:10px;
+      transition:transform .2s;
+    }
+
+    #emojiMusica:hover{
+      transform:scale(1.2);
+    }
+
+    footer{
+      display:none;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>para ti</h1>
+</header>
+
+<main>
+<section>
+
+<div class="contenedor">
+  <img src="https://i.pinimg.com/originals/1f/a2/2b/1fa22befc10e3cbacd58c5b407a97997.gif" height="400">
+</div>
+
+<p class="texto">Para la niña que se convirtio en mi lugar favorito</p>
+<p class="texto">zabes kien es?</p>
+
+<button class="boton" onclick="mostrarCarta()">Descubrelo 💌</button>
+
+<div id="carta">
+
+  <h2>mi vale 🌹</h2>
+
+  <!-- Emoji que revela la musica -->
+  <p id="emojiMusica" onclick="mostrarMusica()">🎵</p>
+
+  <!-- Audio oculto -->
+  <audio id="musica" controls loop style="display:none;">
+    <source src="https://files.catbox.moe/qisho1.mp3" type="audio/mpeg">
+  </audio>
+
+  <p>Holuuu mi amoor bellooo estaba haciendo algo por aqui y dije pq no te hago uno?? haci recuerdo cosas de paso 👅 quería aprovechar esto para decirte que te quiero mucho, no te voy a mentir diciendo que todo va a ser perfecto ni nd de eso pq yo sé que me tardo en responder y que aveces me cuestan varias cosas, pero eres alguien importante para mí y aunque no siempre lo demuestre intento que tengas más recuerdos bonitos que malos conmigo, aveces no digo mucho lo que siento o no soy tan detallista pero no es pq no quiera solo que no estoy muy acostumbrado, igual poco a poco lo intento más, si me burlo de ti o te molesto ya sabes que es pq hay confianza y cariño aunque suene raro asi soy yo jajaja, quiero que recuerdes que me gusta mucho cómo eres conmigo incluso esas cositas que tú llamas defectos aunque yo ni las note, porque sí puedes ser hermosa graciosa y todo eso pero lo que más valoro es lo bien que la paso contigo, me gustaria seguir construyendo algo bonito entre los dos poco a poco capaz no sé ni q estoy escribiendo aqui jakslaksjs pero sale asi nomas, también gracias pq contigo casi no tengo malos recuerdos, bueno excepto esa vez que te tuve q perseguir pq disq te dije gata o algo asi pero ya quedó como algo gracioso, hasta mis amigos se rieron diciendo que andaba de migajero siguiéndote JSJAJAJAJ pero bueno eso ya pasó, si algún día te sientes mal o necesitas hablar con alguien recuerda que puedes contar conmigo sin importar la hora, solo quiero que te sientas tranquila y querida como te lo mereces, con todo mi cariño yo💌</>
+  <p>notevurlesp</p>
+</div>
+
+</section>
+</main>
+
+<script>
+function mostrarCarta(){
+  var carta=document.getElementById("carta");
+  carta.style.display="block";
+  carta.scrollIntoView({behavior:"smooth"});
+}
+
+function mostrarMusica(){
+  var musica=document.getElementById("musica");
+
+  musica.style.display="block"; // muestra controles
+  musica.play(); // empieza musica
+}
+</script>
+
+</body>
+</html>
